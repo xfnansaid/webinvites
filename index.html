@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>WEB INVITES — Digital Wedding & Event Invitations | Share on WhatsApp</title>
+    <meta name="description"
+        content="Create beautiful digital wedding and event invitations in minutes. Standard (₹249) & Premium (₹499) templates, live RSVP tracking, venue Google Maps & WhatsApp sharing.">
+    <meta name="keywords"
+        content="digital wedding invitation, online wedding invitation, WhatsApp wedding card, digital e-invite India, wedding invitation maker, Nikah invitation online, engagement invitation digital, online invitation with RSVP">
+    <meta name="author" content="WEB INVITES">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="WEB INVITES — Beautiful Digital Wedding & Event Invitations">
+    <meta property="og:description"
+        content="Create stunning digital invitations in minutes. Luxury templates, live RSVPs, map navigation & WhatsApp sharing. Standard ₹249 | Premium ₹499.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://invytor.com">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Fonts: Noto Serif, Plus Jakarta Sans, Cormorant Garamond, Cinzel & Material Symbols -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ==========================================
+           ROYAL EMERALD, GOLD & SAGE PALETTE
+           ========================================== */
+        :root {
+            --bg-primary: #FAF8F5;
+            --bg-cream: #F5EFE6;
+            --bg-card: #FFFFFF;
+
+            --ink: #1B1C18;
+            --ink-soft: #44483D;
+            --ink-muted: #66695F;
+
+            --emerald-primary: #0F382C;
+            --emerald-dark: #08241C;
+            --emerald-light: #E8F0EC;
+
+            --sage-50: #F4F7F4;
+            --sage-100: #E3EBE3;
+            --sage-500: #6E8569;
+            --sage-600: #4C6546;
+            --sage-700: #384E33;
+
+            --champagne-50: #FAF6EE;
+            --champagne-100: #F3EAD5;
+            --champagne-200: #E9D8B2;
+            --champagne-300: #D8C28E;
+            --champagne-400: #C9A86A;
+            --champagne-500: #B28F42;
+            --champagne-600: #8C6D2B;
+
+            --blush-100: #FCE8EC;
+            --blush-200: #F8D1D9;
+            --blush-600: #B5294E;
+
+            --border-subtle: rgba(76, 101, 70, 0.12);
+            --border-gold: rgba(201, 168, 106, 0.35);
+
+            --shadow-soft: 0 4px 20px rgba(27, 28, 24, 0.05);
+            --shadow-md: 0 8px 30px rgba(27, 28, 24, 0.08);
+            --shadow-lg: 0 20px 45px rgba(27, 28, 24, 0.12);
+            --shadow-lift: 0 12px 35px rgba(76, 101, 70, 0.15);
+
+            --font-serif: 'Noto Serif', 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Cormorant Garamond', serif;
+        }
+
+        /* RESET & BASE */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--ink);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        /* SCROLL PROGRESS BAR */
+        #scroll-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, #b25e69, #c9a86a, #6e8569);
+            z-index: 9999;
+            transition: width 0.1s ease-out;
+        }
+
+        /* NAVIGATION HEADER */
+        .pnav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(250, 248, 245, 0.92);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--emerald-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .logo-mark {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--emerald-primary), var(--sage-600));
+            color: #FFFFFF;
+            display: grid;
+            place-items: center;
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-weight: 700;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 12px rgba(15, 56, 44, 0.2);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--ink-soft);
+        }
+
+        .nav-links a:hover {
+            color: var(--sage-600);
+        }
+
+        .btn-nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 100px;
+            background: var(--emerald-primary);
+            color: #FFFFFF;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            box-shadow: 0 4px 14px rgba(15, 56, 44, 0.18);
+            transition: all 0.25s ease;
+        }
+
+        .btn-nav-cta:hover {
+            background: var(--sage-600);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(76, 101, 70, 0.25);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--ink);
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-drawer {
+            position: fixed;
+            top: 72px;
+            left: 0;
+            right: 0;
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 20px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-150%);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 99;
+        }
+
+        .mobile-drawer.open {
+            transform: translateY(0);
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            position: relative;
+            padding: 140px 24px 80px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero-bg-blobs {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .blob-1 {
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 45vw;
+            height: 45vw;
+            background: #fce8ec;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.5;
+            animation: floaty 10s ease-in-out infinite alternate;
+        }
+
+        .blob-2 {
+            position: absolute;
+            top: 10%;
+            right: -10%;
+            width: 48vw;
+            height: 48vw;
+            background: #e3ebe3;
+            border-radius: 50%;
+            filter: blur(140px);
+            opacity: 0.55;
+            animation: floaty 12s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes floaty {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            100% {
+                transform: translate(30px, -30px) scale(1.05);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: var(--shadow-soft);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.8rem, 6vw, 4.8rem);
+            line-height: 1.1;
+            font-weight: 600;
+            color: var(--emerald-primary);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-title .display-italic {
+            font-style: italic;
+            font-family: var(--font-serif);
+            color: var(--champagne-600);
+            background: linear-gradient(135deg, #1B1C18 0%, #4C6546 50%, #B28F42 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.12rem;
+            color: var(--ink-soft);
+            max-width: 640px;
+            margin: 0 auto 36px;
+            line-height: 1.7;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .btn-primary-hero {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            border-radius: 100px;
+            background: var(--emerald-primary);
+            color: #FFFFFF;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            box-shadow: 0 8px 25px rgba(15, 56, 44, 0.22);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-hero:hover {
+            background: var(--emerald-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(15, 56, 44, 0.3);
+        }
+
+        .btn-whatsapp-hero {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--blush-200);
+            color: var(--ink);
+            font-size: 0.92rem;
+            font-weight: 700;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp-hero:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lift);
+            border-color: var(--champagne-400);
+        }
+
+        .hero-trust-chips {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .trust-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--ink-muted);
+        }
+
+        /* FLOATING SIDE CARDS (DESKTOP) */
+        .hero-card-left,
+        .hero-card-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 5;
+            display: none;
+        }
+
+        @media (min-width: 1280px) {
+
+            .hero-card-left,
+            .hero-card-right {
+                display: block;
+            }
+        }
+
+        .hero-card-left {
+            left: 2vw;
+        }
+
+        .hero-card-right {
+            right: 2vw;
+        }
+
+        .side-preview-card {
+            width: 210px;
+            background: var(--bg-card);
+            border-radius: 24px;
+            border: 1px solid #FFFFFF;
+            padding: 22px 18px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            position: relative;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero-card-left .side-preview-card {
+            transform: perspective(1000px) rotateY(12deg) rotate(-4deg);
+        }
+
+        .hero-card-right .side-preview-card {
+            transform: perspective(1000px) rotateY(-12deg) rotate(4deg);
+        }
+
+        /* TEMPLATE SECTION */
+        .templates-section {
+            padding: 60px 0 100px;
+            background: var(--bg-primary);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 0 24px;
+        }
+
+        .eyebrow-tag {
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--champagne-600);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .section-heading {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            color: var(--emerald-primary);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* STICKY SELECTION BAR */
+        .sticky-selection-bar {
+            position: sticky;
+            top: 72px;
+            z-index: 80;
+            background: rgba(251, 249, 242, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 12px 24px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .selected-info {
+            min-width: 0;
+        }
+
+        .selected-label {
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+            margin-bottom: 2px;
+        }
+
+        .selected-title {
+            font-family: var(--font-serif);
+            font-size: 1.05rem;
+            font-style: italic;
+            font-weight: 700;
+            color: var(--emerald-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .btn-use-selected {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--emerald-primary);
+            color: #FFFFFF;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .btn-use-selected:hover {
+            background: var(--sage-600);
+        }
+
+        /* CATEGORY FILTER CHIPS BAR */
+        .filter-bar-wrap {
+            max-width: 1280px;
+            margin: 0 auto 32px;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .filter-chips-container {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+            flex-grow: 1;
+        }
+
+        .filter-chips-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .filter-chip {
+            flex-shrink: 0;
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1.5px solid var(--border-subtle);
+            background: transparent;
+            color: var(--ink-soft);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .filter-chip.active {
+            background: var(--blush-600);
+            color: #FFFFFF;
+            border-color: var(--blush-600);
+            box-shadow: 0 4px 12px rgba(181, 41, 78, 0.25);
+        }
+
+        .filter-chip:hover:not(.active) {
+            border-color: var(--sage-600);
+            color: var(--emerald-primary);
+            background: rgba(76, 101, 70, 0.05);
+        }
+
+        .template-counter {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--ink-muted);
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        /* TEMPLATES HORIZONTAL SLIDER */
+        .slider-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .templates-slider {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding: 12px 4px 24px 4px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: var(--emerald-primary) var(--sage-100);
+        }
+
+        .templates-slider::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .templates-slider::-webkit-scrollbar-track {
+            background: var(--sage-100);
+            border-radius: 10px;
+        }
+
+        .templates-slider::-webkit-scrollbar-thumb {
+            background: var(--emerald-primary);
+            border-radius: 10px;
+        }
+
+        .templates-slider .tp-card {
+            /* card sizing now handled by .tp-card itself */
+            scroll-snap-align: start;
+        }
+
+        .slider-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #FFFFFF;
+            border: 1.5px solid var(--border-subtle);
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            color: var(--emerald-primary);
+            transition: all 0.2s ease;
+        }
+
+        .slider-nav-btn:hover {
+            background: var(--emerald-primary);
+            color: #FFFFFF;
+            border-color: var(--emerald-primary);
+        }
+
+        .slider-nav-btn.prev {
+            left: 4px;
+        }
+
+        .slider-nav-btn.next {
+            right: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .slider-nav-btn {
+                display: none;
+            }
+        }
+
+        /* TEMPLATE CARD STYLING — Portrait Layout */
+        .tp-card {
+            border-radius: 20px;
+            overflow: hidden;
+            background: #1B1C18;
+            border: 1.5px solid var(--border-subtle);
+            box-shadow: var(--shadow-soft);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            cursor: pointer;
+            /* Portrait aspect ratio — tall like a phone screen */
+            aspect-ratio: 9 / 14;
+            flex: 0 0 220px;
+            max-width: 260px;
+        }
+
+        @media (min-width: 640px) {
+            .tp-card {
+                flex: 0 0 240px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .tp-card {
+                flex: 0 0 260px;
+            }
+        }
+
+        .tp-card:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--champagne-400);
+        }
+
+        .tp-card.selected-active {
+            border: 2px solid var(--emerald-primary);
+            box-shadow: 0 0 0 3px rgba(15, 56, 44, 0.15), var(--shadow-lg);
+        }
+
+        /* Thumbnail fills the entire portrait card */
+        .tp-thumbnail {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #1B1C18;
+        }
+
+        .tp-thumb-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.7s ease;
+        }
+
+        .tp-card:hover .tp-thumb-img {
+            transform: scale(1.07);
+        }
+
+        /* Gradient scrim at bottom for readability */
+        .tp-thumbnail::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 55%;
+            background: linear-gradient(to top, rgba(10, 10, 10, 0.82) 0%, rgba(10, 10, 10, 0.3) 55%, transparent 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .tp-badge-price {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(15, 15, 15, 0.75);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            padding: 4px 12px;
+            z-index: 3;
+            letter-spacing: 0.03em;
+        }
+
+        /* Frosted-glass overlay button at bottom of card */
+        .btn-card-overlay {
+            position: absolute;
+            bottom: 14px;
+            left: 14px;
+            right: 14px;
+            z-index: 4;
+            padding: 11px 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            background: rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            cursor: pointer;
+            text-align: center;
+            letter-spacing: 0.04em;
+            transition: all 0.25s ease;
+        }
+
+        .btn-card-overlay:hover {
+            background: rgba(255, 255, 255, 0.26);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-1px);
+        }
+
+        /* HOW IT WORKS SECTION */
+        .how-section {
+            padding: 90px 0;
+            background: var(--bg-cream);
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .steps-grid {
+            max-width: 1100px;
+            margin: 48px auto 0;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .step-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 36px 28px;
+            border: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            text-align: center;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--sage-100);
+            color: var(--sage-600);
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: 700;
+            display: grid;
+            place-items: center;
+            margin: 0 auto 20px;
+        }
+
+        .step-title {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--emerald-primary);
+            margin-bottom: 10px;
+        }
+
+        .step-text {
+            font-size: 0.9rem;
+            color: var(--ink-muted);
+            line-height: 1.6;
+        }
+
+        /* FEATURES GRID SECTION */
+        .features-section {
+            padding: 90px 0;
+            background: var(--bg-primary);
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 48px auto 0;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 32px 28px;
+            border-radius: 16px;
+            border: 1.5px solid var(--border-subtle);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--champagne-400);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-icon-box {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: var(--emerald-light);
+            color: var(--emerald-primary);
+            display: grid;
+            place-items: center;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .feature-info h3 {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            color: var(--emerald-primary);
+            margin-bottom: 6px;
+        }
+
+        .feature-info p {
+            font-size: 0.88rem;
+            color: var(--ink-muted);
+            line-height: 1.6;
+        }
+
+        /* FAQ ACCORDION SECTION */
+        .faq-section {
+            padding: 90px 0;
+            background: var(--bg-cream);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto 0;
+            padding: 0 24px;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border-subtle);
+            margin-bottom: 14px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 24px;
+            background: transparent;
+            border: none;
+            text-align: left;
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--emerald-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+            padding: 0 24px;
+            font-size: 0.92rem;
+            color: var(--ink-soft);
+            line-height: 1.65;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 250px;
+            padding: 0 24px 20px;
+        }
+
+        .faq-item.open .faq-question span {
+            transform: rotate(180deg);
+        }
+
+        .faq-question span {
+            transition: transform 0.3s ease;
+            color: var(--champagne-600);
+        }
+
+        /* WHATSAPP CTA BAR */
+        .cta-section {
+            padding: 80px 24px;
+            background: var(--emerald-primary);
+            color: #FFFFFF;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-inner {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 4vw, 3.4rem);
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #FFFFFF;
+        }
+
+        .cta-text {
+            font-size: 1.05rem;
+            color: #D3E0D9;
+            margin-bottom: 32px;
+        }
+
+        .btn-whatsapp-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            border-radius: 100px;
+            background: #25D366;
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 1.05rem;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp-cta:hover {
+            background: #1DA851;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--emerald-dark);
+            color: #83958C;
+            padding: 40px 24px;
+            text-align: center;
+            font-size: 0.88rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* FLOATING WHATSAPP BUTTON */
+        .floating-wa-btn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 1000;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #FFFFFF;
+            display: grid;
+            place-items: center;
+            font-size: 1.8rem;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse-wa 2s infinite;
+        }
+
+        .floating-wa-btn:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse-wa {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+            }
+
+            70% {
+                box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* PHONE FRAME PREVIEW MODAL */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 28, 22, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s ease;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-phone-container {
+            position: relative;
+            width: 100%;
+            max-width: 420px;
+            height: 85vh;
+            max-height: 800px;
+            background: #111111;
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 0 2px rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            transform: scale(0.92);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .modal-overlay.active .modal-phone-container {
+            transform: scale(1);
+        }
+
+        .phone-header-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 16px 12px;
+            color: #FFFFFF;
+        }
+
+        .phone-title {
+            font-family: var(--font-serif);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #FAF8F5;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .modal-close-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            font-size: 1.1rem;
+            transition: background 0.2s ease;
+        }
+
+        .modal-close-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .phone-screen {
+            flex-grow: 1;
+            background: #FFFFFF;
+            border-radius: 28px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .phone-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .phone-footer-bar {
+            padding: 12px 16px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-modal-use {
+            flex: 1;
+            padding: 12px;
+            border-radius: 100px;
+            background: #25D366;
+            color: #FFFFFF;
+            font-size: 0.88rem;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        /* CUSTOMIZE / ORDER MODAL */
+        .order-modal-container {
+            background: #FFFFFF;
+            width: 100%;
+            max-width: 480px;
+            border-radius: 24px;
+            padding: 32px 28px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .order-modal-title {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            color: var(--emerald-primary);
+            margin-bottom: 6px;
+        }
+
+        .order-modal-sub {
+            font-size: 0.88rem;
+            color: var(--ink-muted);
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--ink-soft);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .form-input,
+        .form-select {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 1.5px solid var(--border-subtle);
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            color: var(--ink);
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-input:focus,
+        .form-select:focus {
+            border-color: var(--emerald-primary);
+        }
+
+        .btn-submit-order {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            background: #25D366;
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        /* RESPONSIVE MEDIA QUERIES */
+        @media (max-width: 992px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-section {
+                padding-top: 110px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .templates-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SCROLL PROGRESS BAR -->
+    <div id="scroll-bar"></div>
+
+    <!-- MAIN NAVIGATION BAR -->
+
+
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero-section" id="home">
+            <div class="hero-bg-blobs">
+                <div class="blob-1"></div>
+                <div class="blob-2"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="material-symbols-outlined"
+                        style="font-size:16px; color:var(--champagne-500);">auto_awesome</span>
+                    <span>Digital Wedding Invitations &nbsp;·&nbsp; Delivered via WhatsApp</span>
+                </div>
+                <h1 class="hero-title">
+                    Beautiful invites,<br>
+                    <span class="display-italic">shared instantly.</span>
+                </h1>
+                <p class="hero-subtitle">Create stunning digital wedding invitations. Choose a template, fill
+                    in your details, and we deliver your custom invite — ready to share on WhatsApp.</p>
+                <div class="hero-cta-group">
+                    <a href="#templates" class="btn-primary-hero">
+                        <span class="material-symbols-outlined" style="font-size:18px;">collections</span>
+                        Browse Templates
+                    </a>
+
+                </div>
+                <div class="hero-trust-chips">
+
+                    <div class="trust-chip">
+                        <span class="material-symbols-outlined"
+                            style="font-size:14px; color:var(--sage-600);">check_circle</span>
+                        Standard &#8377;249 &nbsp;|&nbsp; Premium &#8377;499
+                    </div>
+                    <div class="trust-chip">
+                        <span class="material-symbols-outlined"
+                            style="font-size:14px; color:var(--blush-600);">favorite</span>
+                        Loved by couples across India
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEMPLATES SHOWCASE SECTION -->
+        <section id="templates" class="templates-section">
+            <div class="section-header reveal">
+                <span class="eyebrow-tag">01 &middot; Our Design Collection</span>
+                <h2 class="section-heading">Pick a design you'll <span
+                        style="font-style: italic; font-family: var(--font-serif); color: var(--champagne-600);">love.</span>
+                </h2>
+                <p style="color: var(--ink-muted); margin-top: 8px;">Swipe horizontally to explore designs for Standard
+                    &amp; Premium packages.</p>
+            </div>
+
+            <!-- SECTION 1: STANDARD TEMPLATES -->
+            <div class="template-tier-block reveal" style="margin-bottom: 50px;">
+                <div style="text-align: center; margin-bottom: 24px;">
+                    <h3
+                        style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--ink); display: inline-flex; align-items: center; gap: 8px;">
+                        <span class="material-symbols-outlined" style="color: var(--sage-600);">star_border</span>
+                        Standard Templates
+                        <span
+                            style="font-size: 0.9rem; color: var(--emerald-primary); background: rgba(15,56,44,0.08); padding: 4px 12px; border-radius: 12px; font-weight: 600; font-family: var(--font-sans);">&#8377;249</span>
+                    </h3>
+                </div>
+
+                <!-- HORIZONTAL SLIDER CONTAINER FOR STANDARD -->
+                <div class="slider-wrapper reveal reveal-scale"
+                    style="max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative;">
+                    <button class="slider-nav-btn prev" onclick="scrollTemplateSlider('standardSlider', -320)"
+                        aria-label="Previous Standard Template">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+
+                    <div class="templates-slider" id="standardSlider">
+                        <!-- Template 1: Standard 0001 -->
+                        <div class="tp-card" data-id="0001" data-title="Template 0001" data-tier="standard"
+                            data-template-id="0001">
+                            <div class="tp-thumbnail" style="background: #FAFAFA;">
+                                <img src="img/crimson-thumb.jpg" alt="Template 0001" class="tp-thumb-img"
+                                    loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(20,20,20,0.75);">&#8377;249</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0001/standard.html', 'Template 0001', 'standard', '0001')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 2: Standard 0002 -->
+                        <div class="tp-card" data-id="0002" data-title="Template 0002" data-tier="standard"
+                            data-template-id="0002">
+                            <div class="tp-thumbnail" style="background: #CEE8F0;">
+                                <img src="img/imgg2.png" alt="Template 0002" class="tp-thumb-img" loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(20,20,20,0.75);">&#8377;249</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0002/standard.html', 'Template 0002', 'standard', '0002')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 3: Standard 0003 -->
+                        <div class="tp-card" data-id="0003" data-title="Template 0003" data-tier="standard"
+                            data-template-id="0003">
+                            <div class="tp-thumbnail" style="background: #FAF7F2;">
+                                <img src="img/imgg3.png" alt="Template 0003" class="tp-thumb-img" loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(20,20,20,0.75);">&#8377;249</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0003/standard.html', 'Template 0003', 'standard', '0003')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 4: Standard 0004 -->
+                        <div class="tp-card" data-id="0004" data-title="Template 0004" data-tier="standard"
+                            data-template-id="0004">
+                            <div class="tp-thumbnail" style="background: #E8F0E4;">
+                                <img src="img/imgg4.png" alt="Template 0004" class="tp-thumb-img" loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(20,20,20,0.75);">&#8377;249</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0004/standard.html', 'Template 0004', 'standard', '0004')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 5: Standard 0005 -->
+                        <div class="tp-card" data-id="0005" data-title="Template 0005" data-tier="standard"
+                            data-template-id="0005">
+                            <div class="tp-thumbnail" style="background: #FFFDF7;">
+                                <img src="img/imggg5.png" alt="Template 0005" class="tp-thumb-img" loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(20,20,20,0.75);">&#8377;249</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0005/standard.html', 'Template 0005', 'standard', '0005')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 6: Standard 0006 -->
+                        <div class="tp-card" data-id="0006" data-title="Template 0006" data-tier="standard"
+                            data-template-id="0006">
+                            <div class="tp-thumbnail" style="background: #FFF5F7;">
+                                <img src="img/Green Floral Illustrated Wedding Invitation.png" alt="Template 0006"
+                                    class="tp-thumb-img" loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(20,20,20,0.75);">&#8377;249</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0006/standard.html', 'Template 0006', 'standard', '0006')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 7: Standard 0007 -->
+                        <div class="tp-card" data-id="0007" data-title="Template 0007" data-tier="standard"
+                            data-template-id="0007">
+                            <div class="tp-thumbnail" style="background: #F2F8F5;">
+                                <img src="img/Beige and Pink Watercolor Wedding Invitation.png" alt="Template 0007"
+                                    class="tp-thumb-img" loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(20,20,20,0.75);">&#8377;249</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0007/standard.html', 'Template 0007', 'standard', '0007')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 8: Standard 0008 -->
+                        <div class="tp-card" data-id="0008" data-title="Template 0008" data-tier="standard"
+                            data-template-id="0008">
+                            <div class="tp-thumbnail" style="background: #F5F3FF;">
+                                <img src="img/imgg8.png" alt="Template 0008" class="tp-thumb-img" loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(20,20,20,0.75);">&#8377;249</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0008/standard.html', 'Template 0008', 'standard', '0008')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 9: Standard 0009 -->
+                        <div class="tp-card" data-id="0009" data-title="Template 0009" data-tier="standard"
+                            data-template-id="0009">
+                            <div class="tp-thumbnail" style="background: #FAF5FF;">
+                                <img src="img/Blue Watercolor Illustration Wedding Invitation.png" alt="Template 0009"
+                                    class="tp-thumb-img" loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(20,20,20,0.75);">&#8377;249</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0009/standard.html', 'Template 0009', 'standard', '0009')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 10: Standard 0010 -->
+                        <div class="tp-card" data-id="0010" data-title="Template 0010" data-tier="standard"
+                            data-template-id="0010">
+                            <div class="tp-thumbnail" style="background: #F9F9FB;">
+                                <img src="img/hero-photo.png" alt="Template 0010" class="tp-thumb-img" loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(20,20,20,0.75);">&#8377;249</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0010/standard.html', 'Template 0010', 'standard', '0010')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="slider-nav-btn next" onclick="scrollTemplateSlider('standardSlider', 320)"
+                        aria-label="Next Standard Template">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- SECTION 2: PREMIUM TEMPLATES -->
+            <div class="template-tier-block reveal" style="margin-top: 40px;">
+                <div style="text-align: center; margin-bottom: 24px;">
+                    <h3
+                        style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--ink); display: inline-flex; align-items: center; gap: 8px;">
+                        <span class="material-symbols-outlined"
+                            style="color: var(--emerald-primary);">workspace_premium</span>
+                        Premium Templates
+                        <span
+                            style="font-size: 0.9rem; color: var(--emerald-primary); background: rgba(15,56,44,0.08); padding: 4px 12px; border-radius: 12px; font-weight: 600; font-family: var(--font-sans);">&#8377;499</span>
+                    </h3>
+                </div>
+
+                <!-- HORIZONTAL SLIDER CONTAINER FOR PREMIUM -->
+                <div class="slider-wrapper reveal reveal-scale"
+                    style="max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative;">
+                    <button class="slider-nav-btn prev" onclick="scrollTemplateSlider('premiumSlider', -320)"
+                        aria-label="Previous Premium Template">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+
+                    <div class="templates-slider" id="premiumSlider">
+                        <!-- Template 1: Premium 1001 -->
+                        <div class="tp-card" data-id="1001" data-title="Template 1001" data-tier="premium"
+                            data-template-id="1001">
+                            <div class="tp-thumbnail" style="background: #0D0F0D;">
+                                <img src="img/crimson-thumb.jpg" alt="Template 1001" class="tp-thumb-img"
+                                    loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(15,56,44,0.85);">&#8377;499</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0001/index.html', 'Template 1001', 'premium', '1001')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 2: Premium 1002 -->
+                        <div class="tp-card" data-id="1002" data-title="Template 1002" data-tier="premium"
+                            data-template-id="1002">
+                            <div class="tp-thumbnail" style="background: #FAF4E8;">
+                                <img src="img/imgg2.png" alt="Template 1002" class="tp-thumb-img" loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(15,56,44,0.85);">&#8377;499</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0002/index.html', 'Template 1002', 'premium', '1002')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 3: Premium 1003 -->
+                        <div class="tp-card" data-id="1003" data-title="Template 1003" data-tier="premium"
+                            data-template-id="1003">
+                            <div class="tp-thumbnail" style="background: #0E0A00;">
+                                <img src="img/imgg3.png" alt="Template 1003" class="tp-thumb-img" loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(15,56,44,0.85);">&#8377;499</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0003/index.html', 'Template 1003', 'premium', '1003')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 4: Premium 1004 -->
+                        <div class="tp-card" data-id="1004" data-title="Template 1004" data-tier="premium"
+                            data-template-id="1004">
+                            <div class="tp-thumbnail" style="background: #FDF5EE;">
+                                <img src="img/imgg4.png" alt="Template 1004" class="tp-thumb-img" loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(15,56,44,0.85);">&#8377;499</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0004/index.html', 'Template 1004', 'premium', '1004')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 5: Premium 1005 -->
+                        <div class="tp-card" data-id="1005" data-title="Template 1005" data-tier="premium"
+                            data-template-id="1005">
+                            <div class="tp-thumbnail" style="background: #1A150C;">
+                                <img src="img/floral-arch-thumb.jpg" alt="Template 1005" class="tp-thumb-img"
+                                    loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(15,56,44,0.85);">&#8377;499</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0005/index.html', 'Template 1005', 'premium', '1005')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 6: Premium 1006 -->
+                        <div class="tp-card" data-id="1006" data-title="Template 1006" data-tier="premium"
+                            data-template-id="1006">
+                            <div class="tp-thumbnail" style="background: #141A22;">
+                                <img src="img/Green Floral Illustrated Wedding Invitation.png" alt="Template 1006"
+                                    class="tp-thumb-img" loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(15,56,44,0.85);">&#8377;499</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0006/index.html', 'Template 1006', 'premium', '1006')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 7: Premium 1007 -->
+                        <div class="tp-card" data-id="1007" data-title="Template 1007" data-tier="premium"
+                            data-template-id="1007">
+                            <div class="tp-thumbnail" style="background: #0E1F18;">
+                                <img src="img/Beige and Pink Watercolor Wedding Invitation.png" alt="Template 1007"
+                                    class="tp-thumb-img" loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(15,56,44,0.85);">&#8377;499</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0007/index.html', 'Template 1007', 'premium', '1007')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 8: Premium 1008 -->
+                        <div class="tp-card" data-id="1008" data-title="Template 1008" data-tier="premium"
+                            data-template-id="1008">
+                            <div class="tp-thumbnail" style="background: #24161B;">
+                                <img src="img/imgg8.png" alt="Template 1008" class="tp-thumb-img" loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(15,56,44,0.85);">&#8377;499</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0008/index.html', 'Template 1008', 'premium', '1008')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 9: Premium 1009 -->
+                        <div class="tp-card" data-id="1009" data-title="Template 1009" data-tier="premium"
+                            data-template-id="1009">
+                            <div class="tp-thumbnail" style="background: #1C1524;">
+                                <img src="img/Blue Watercolor Illustration Wedding Invitation.png" alt="Template 1009"
+                                    class="tp-thumb-img" loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(15,56,44,0.85);">&#8377;499</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0009/index.html', 'Template 1009', 'premium', '1009')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+
+                        <!-- Template 10: Premium 1010 -->
+                        <div class="tp-card" data-id="1010" data-title="Template 1010" data-tier="premium"
+                            data-template-id="1010">
+                            <div class="tp-thumbnail" style="background: #1A1110;">
+                                <img src="img/hero-photo.png" alt="Template 1010" class="tp-thumb-img" loading="lazy">
+                                <span class="tp-badge-price" style="background: rgba(15,56,44,0.85);">&#8377;499</span>
+                                <button class="btn-card-overlay"
+                                    onclick="openPreviewModal('https://one-tawny-two.vercel.app/0010/index.html', 'Template 1010', 'premium', '1010')">Preview
+                                    Design</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="slider-nav-btn next" onclick="scrollTemplateSlider('premiumSlider', 320)"
+                        aria-label="Next Premium Template">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section id="features" class="features-section">
+            <div class="section-header reveal">
+                <span class="eyebrow-tag">02 · Packages</span>
+                <h2 class="section-heading">Compare our <span
+                        style="font-style: italic; font-family: var(--font-serif); color: var(--champagne-600);">options</span>
+                </h2>
+                <p style="color: var(--ink-muted); margin-top: 8px;">Everything you need to invite your guests
+                    beautifully.</p>
+            </div>
+
+            <div
+                style="max-width: 1000px; margin: 40px auto 0; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+
+                <!-- Standard Features -->
+                <div class="reveal reveal-left"
+                    style="background: var(--bg-card); border-radius: 20px; padding: 40px 32px; border: 1.5px solid var(--border-subtle); box-shadow: var(--shadow-soft);">
+                    <div style="text-align: center; margin-bottom: 24px;">
+                        <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--ink);">Standard</h3>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--emerald-primary); margin-top: 8px;">
+                            ₹249</div>
+                        <p style="font-size: 0.88rem; color: var(--ink-muted); margin-top: 8px;">Perfect for simple,
+                            elegant invitations.</p>
+                    </div>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 16px;">
+                        <li style="display: flex; align-items: flex-start; gap: 12px;">
+                            <span class="material-symbols-outlined"
+                                style="color: var(--sage-600); font-size: 20px; margin-top: 2px;">check_circle</span>
+                            <div>
+                                <strong style="display: block; font-size: 0.95rem; color: var(--ink);">Beautiful Event
+                                    Details</strong>
+                                <span style="font-size: 0.85rem; color: var(--ink-muted);">Display date, time, and venue
+                                    clearly.</span>
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px;">
+                            <span class="material-symbols-outlined"
+                                style="color: var(--sage-600); font-size: 20px; margin-top: 2px;">check_circle</span>
+                            <div>
+                                <strong style="display: block; font-size: 0.95rem; color: var(--ink);">Host & Family
+                                    Info</strong>
+                                <span style="font-size: 0.85rem; color: var(--ink-muted);">Include names of bride,
+                                    groom, and parents.</span>
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px;">
+                            <span class="material-symbols-outlined"
+                                style="color: var(--sage-600); font-size: 20px; margin-top: 2px;">check_circle</span>
+                            <div>
+                                <strong style="display: block; font-size: 0.95rem; color: var(--ink);">WhatsApp
+                                    Friendly</strong>
+                                <span style="font-size: 0.85rem; color: var(--ink-muted);">Easily shareable via WhatsApp
+                                    link.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Premium Features -->
+                <div class="reveal reveal-right"
+                    style="background: var(--bg-card); border-radius: 20px; padding: 40px 32px; border: 2px solid var(--emerald-primary); box-shadow: var(--shadow-md); position: relative;">
+                    <div
+                        style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--emerald-primary); color: #FFF; padding: 4px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">
+                        Most Popular</div>
+                    <div style="text-align: center; margin-bottom: 24px;">
+                        <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--emerald-primary);">
+                            Premium</h3>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--emerald-primary); margin-top: 8px;">
+                            ₹499</div>
+                        <p style="font-size: 0.88rem; color: var(--ink-muted); margin-top: 8px;">The ultimate digital
+                            invitation experience.</p>
+                    </div>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 16px;">
+                        <li style="display: flex; align-items: flex-start; gap: 12px;">
+                            <span class="material-symbols-outlined"
+                                style="color: var(--emerald-primary); font-size: 20px; margin-top: 2px;">check_circle</span>
+                            <div>
+                                <strong style="display: block; font-size: 0.95rem; color: var(--ink);">Everything in
+                                    Standard</strong>
+                                <span style="font-size: 0.85rem; color: var(--ink-muted);">All the essential
+                                    details.</span>
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px;">
+                            <span class="material-symbols-outlined"
+                                style="color: var(--emerald-primary); font-size: 20px; margin-top: 2px;">check_circle</span>
+                            <div>
+                                <strong style="display: block; font-size: 0.95rem; color: var(--ink);">Interactive
+                                    Countdown Timer</strong>
+                                <span style="font-size: 0.85rem; color: var(--ink-muted);">Build excitement for the big
+                                    day.</span>
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px;">
+                            <span class="material-symbols-outlined"
+                                style="color: var(--emerald-primary); font-size: 20px; margin-top: 2px;">check_circle</span>
+                            <div>
+                                <strong style="display: block; font-size: 0.95rem; color: var(--ink);">Google Maps
+                                    Navigation</strong>
+                                <span style="font-size: 0.85rem; color: var(--ink-muted);">One-click directions to the
+                                    venue.</span>
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px;">
+                            <span class="material-symbols-outlined"
+                                style="color: var(--emerald-primary); font-size: 20px; margin-top: 2px;">check_circle</span>
+                            <div>
+                                <strong style="display: block; font-size: 0.95rem; color: var(--ink);">Live RSVP
+                                    Tracking</strong>
+                                <span style="font-size: 0.85rem; color: var(--ink-muted);">Guests can confirm attendance
+                                    easily.</span>
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px;">
+                            <span class="material-symbols-outlined"
+                                style="color: var(--emerald-primary); font-size: 20px; margin-top: 2px;">check_circle</span>
+                            <div>
+                                <strong style="display: block; font-size: 0.95rem; color: var(--ink);">Couple Stories &
+                                    Photos</strong>
+                                <span style="font-size: 0.85rem; color: var(--ink-muted);">Share your journey and photo
+                                    gallery.</span>
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px;">
+                            <span class="material-symbols-outlined"
+                                style="color: var(--emerald-primary); font-size: 20px; margin-top: 2px;">check_circle</span>
+                            <div>
+                                <strong style="display: block; font-size: 0.95rem; color: var(--ink);">Save to
+                                    Calendar</strong>
+                                <span style="font-size: 0.85rem; color: var(--ink-muted);">Guests can instantly add to
+                                    Google Calendar.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS SECTION -->
+        <section id="how-it-works" class="how-section">
+            <div class="section-header reveal">
+                <span class="eyebrow-tag">03 · Simple Process</span>
+                <h2 class="section-heading">How to get your <span
+                        style="font-style: italic; font-family: var(--font-serif); color: var(--champagne-600);">invite</span>
+                </h2>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card reveal reveal-scale delay-1">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Choose Design</h3>
+                    <p class="step-text">Explore our collection of designs and select your favourite invitation
+                        template.</p>
+                </div>
+                <div class="step-card reveal reveal-scale delay-2">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Send Details</h3>
+                    <p class="step-text">Send your event info, photos, and Google Maps location directly on WhatsApp.
+                    </p>
+                </div>
+                <div class="step-card reveal reveal-scale delay-3">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Share with Guests</h3>
+                    <p class="step-text">Receive your personal website link with an automatic WhatsApp card preview in
+                        under 5 minutes!</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- INTERACTIVE FAQ ACCORDION SECTION -->
+        <section class="faq-section" id="faq">
+            <div class="section-header reveal">
+                <span class="eyebrow-tag">04 &middot; FAQs</span>
+                <h2 class="section-heading">Questions you <span
+                        style="font-style: italic; font-family: var(--font-serif); color: var(--champagne-600);">might
+                        have.</span></h2>
+                <p style="color: var(--ink-muted); margin-top: 8px;">Everything you need to know before placing your
+                    order.</p>
+            </div>
+
+            <div class="faq-container">
+
+                <div class="faq-item reveal" data-faq-category="general">
+                    <button class="faq-question" onclick="toggleFaqItem(this)">
+                        How does the process work?
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="faq-answer">
+                        It's simple! Choose a template you love, click "Preview Design" to see it live, then click "Use
+                        This Design". Fill in your event details on the customization form and click Send — your details
+                        reach our team instantly on WhatsApp. We then personalize your invitation and deliver a live
+                        website link, usually within a few hours.
+                    </div>
+                </div>
+
+                <div class="faq-item reveal" data-faq-category="general">
+                    <button class="faq-question" onclick="toggleFaqItem(this)">
+                        How long does it take to receive my invitation?
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="faq-answer">
+                        Most invitations are ready within <strong>2–5 hours</strong> of us receiving your details.
+                        During peak times (weekends, festive seasons) it may take up to 24 hours. We'll keep you updated
+                        via WhatsApp throughout the process.
+                    </div>
+                </div>
+
+                <div class="faq-item reveal" data-faq-category="general">
+                    <button class="faq-question" onclick="toggleFaqItem(this)">
+                        What is the difference between Standard and Premium?
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="faq-answer">
+                        <strong>Standard (₹249)</strong> covers all the essentials — couple names, parents, date, time,
+                        and venue. <strong>Premium (₹499)</strong> includes everything in Standard plus a couple story
+                        section, photo gallery, Google Maps navigation, an interactive countdown timer, RSVP tracking,
+                        and a save-to-calendar button.
+                    </div>
+                </div>
+
+                <div class="faq-item reveal" data-faq-category="customization">
+                    <button class="faq-question" onclick="toggleFaqItem(this)">
+                        Can I make changes after the invitation is delivered?
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes! We offer <strong>one free revision</strong> within 48 hours of delivery. Just message us on
+                        WhatsApp with the correction and we'll update it promptly. Additional edits beyond that may
+                        carry a small fee depending on the scope.
+                    </div>
+                </div>
+
+                <div class="faq-item reveal" data-faq-category="customization">
+                    <button class="faq-question" onclick="toggleFaqItem(this)">
+                        How do I send my photos (for Premium)?
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="faq-answer">
+                        After submitting your customization form, simply send your couple photos directly to us via
+                        WhatsApp. You can share 1–5 high-quality images. We recommend photos that are clear, well-lit,
+                        and in portrait orientation for best results on the invitation.
+                    </div>
+                </div>
+
+                <div class="faq-item reveal" data-faq-category="sharing">
+                    <button class="faq-question" onclick="toggleFaqItem(this)">
+                        How do guests open or view the invitation?
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="faq-answer">
+                        Your invitation is a <strong>live website link</strong> — no app download needed. You simply
+                        share the link on WhatsApp, and guests tap it to open a beautiful full-screen invitation on any
+                        phone or computer. It works on all devices and browsers instantly.
+                    </div>
+                </div>
+
+                <div class="faq-item reveal" data-faq-category="sharing">
+                    <button class="faq-question" onclick="toggleFaqItem(this)">
+                        How do I pay? Is it safe?
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="faq-answer">
+                        Payment is handled directly over WhatsApp via UPI, bank transfer, or any method convenient for
+                        you. We only begin work after payment confirmation, so your money is always secure. We'll send
+                        you a receipt once payment is received.
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+
+
+        <!-- WHATSAPP CTA BAR -->
+        <section class="cta-section">
+            <div class="cta-inner">
+                <h2 class="cta-title">Ready to create your dream invite?</h2>
+                <p class="cta-text">Chat with our team on WhatsApp to customize your invitation details in under 5
+                    minutes.</p>
+                <a href="https://wa.me/919778513196" target="_blank" class="btn-whatsapp-cta">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp Now
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 WEB INVITES — Crafted with love for unforgettable celebrations.</p>
+    </footer>
+
+    <!-- Floating WhatsApp button removed -->
+
+    <!-- PHONE PREVIEW MODAL -->
+    <div class="modal-overlay" id="previewModal">
+        <div class="modal-phone-container">
+            <div class="phone-header-bar">
+                <div class="phone-title" id="modalTemplateTitle">Begin Forever</div>
+                <button class="modal-close-btn" onclick="closePreviewModal()" aria-label="Close Preview">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="phone-screen">
+                <iframe id="modalIframe" class="phone-iframe" src="about:blank"
+                    title="Live Invitation Preview"></iframe>
+            </div>
+            <div class="phone-footer-bar">
+                <button class="btn-modal-use" onclick="openOrderModalFromPreview()">Use This Design →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CUSTOMIZE / ORDER MODAL -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="order-modal-container">
+            <button class="modal-close-btn" onclick="closeOrderModal()"
+                style="position: absolute; top: 16px; right: 16px; background: var(--sage-100); color: var(--ink);"
+                aria-label="Close Order Modal">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <h3 class="order-modal-title">Customize Invitation</h3>
+            <p class="order-modal-sub">Selected Template: <strong id="orderModalTemplateName"
+                    style="color: var(--emerald-primary);">Begin Forever</strong></p>
+
+            <form id="orderForm" onsubmit="handleOrderSubmit(event)">
+                <div class="form-group">
+                    <label class="form-label">Occasion Type</label>
+                    <select class="form-select" id="orderOccasion">
+                        <option value="Wedding">Wedding / Nikah</option>
+                        <option value="Engagement">Engagement</option>
+                        <option value="Birthday">Birthday Party</option>
+                        <option value="Naming Ceremony">Naming Ceremony</option>
+                        <option value="House Warming">House Warming</option>
+                        <option value="Anniversary">Anniversary</option>
+                        <option value="Baby Shower">Baby Shower</option>
+                        <option value="Other">Other Event</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Host / Couple Names</label>
+                    <input type="text" class="form-input" id="orderNames" placeholder="e.g. Ayesha & Hamza" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Event Date</label>
+                    <input type="date" class="form-input" id="orderDate" required>
+                </div>
+
+                <button type="submit" class="btn-submit-order">
+                    <i class="fa-brands fa-whatsapp"></i> Send Order to WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Track Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scroll-bar').style.width = scrolled + '%';
+        });
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            document.getElementById('mobileDrawer').classList.toggle('open');
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobileDrawer').classList.remove('open');
+        }
+
+        // Selected Template State
+        let currentSelectedTemplateTitle = 'Template 0001';
+        let currentSelectedTemplateTier = 'standard';
+        let currentSelectedTemplateId = '0001';
+
+
+
+        // Preview Modal Functions
+        const previewModal = document.getElementById('previewModal');
+        const modalIframe = document.getElementById('modalIframe');
+        const modalTemplateTitle = document.getElementById('modalTemplateTitle');
+
+        function openPreviewModal(url, title, tier, templateId) {
+            currentSelectedTemplateTitle = title;
+            currentSelectedTemplateTier = tier || 'premium';
+            currentSelectedTemplateId = templateId || '1001';
+            modalTemplateTitle.textContent = title;
+            modalIframe.src = url;
+            previewModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePreviewModal() {
+            previewModal.classList.remove('active');
+            modalIframe.src = 'about:blank';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openOrderModalFromPreview() {
+            closePreviewModal();
+            const params = new URLSearchParams({
+                id: currentSelectedTemplateId,
+                name: currentSelectedTemplateTitle
+            });
+            if (currentSelectedTemplateTier === 'premium') {
+                window.location.href = 'premium.html?' + params.toString();
+            } else {
+                window.location.href = 'standard.html?' + params.toString();
+            }
+        }
+
+        function openOrderModalFromSticky() {
+            openOrderModal(currentSelectedTemplateTitle);
+        }
+
+        // Order Modal Functions
+        const orderModal = document.getElementById('orderModal');
+        const orderModalTemplateName = document.getElementById('orderModalTemplateName');
+
+        function openOrderModal(templateName) {
+            orderModalTemplateName.textContent = templateName;
+            orderModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeOrderModal() {
+            orderModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function handleOrderSubmit(e) {
+            e.preventDefault();
+            const occasion = document.getElementById('orderOccasion').value;
+            const names = document.getElementById('orderNames').value;
+            const date = document.getElementById('orderDate').value;
+            const template = currentSelectedTemplateTitle;
+
+            const text = `Hello WEB INVITES Team! I would like to order a digital invitation.%0A%0A*Template:* ${template}%0A*Occasion:* ${occasion}%0A*Names:* ${names}%0A*Event Date:* ${date}`;
+            window.open(`https://wa.me/919778513196?text=${text}`, '_blank');
+            closeOrderModal();
+        }
+
+        // Horizontal Slider Scroll Helper
+        function scrollTemplateSlider(sliderId, direction) {
+            const container = document.getElementById(sliderId);
+            if (container) {
+                container.scrollBy({ left: direction, behavior: 'smooth' });
+            }
+        }
+
+        // Scroll Reveal Observer (IntersectionObserver)
+        function initScrollReveal() {
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.1,
+                rootMargin: "0px 0px -40px 0px"
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+        }
+
+        // Interactive FAQ Item Toggle
+        function toggleFaqItem(btn) {
+            const currentItem = btn.closest('.faq-item');
+            const isOpen = currentItem.classList.contains('open');
+
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('open');
+            });
+
+            if (!isOpen) {
+                currentItem.classList.add('open');
+            }
+        }
+
+        // Filter FAQ by Category Tabs
+        function setFaqCategory(tabBtn, category) {
+            document.querySelectorAll('.faq-tab').forEach(t => t.classList.remove('active'));
+            tabBtn.classList.add('active');
+
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const itemCat = item.getAttribute('data-faq-category');
+                if (category === 'all' || itemCat === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Instant Live Search for FAQ
+        function filterFaqQuestions() {
+            const input = document.getElementById('faqSearchInput');
+            const clearBtn = document.getElementById('clearFaqSearch');
+            const filter = input.value.toLowerCase().trim();
+
+            if (clearBtn) {
+                clearBtn.style.display = filter.length > 0 ? 'flex' : 'none';
+            }
+
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(filter)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function clearFaqSearch() {
+            const input = document.getElementById('faqSearchInput');
+            if (input) {
+                input.value = '';
+                filterFaqQuestions();
+            }
+        }
+
+        // Initialize Scroll Reveal on Load
+        document.addEventListener('DOMContentLoaded', () => {
+            initScrollReveal();
+        });
+
+        // Close Modals on Overlay Click
+        previewModal.addEventListener('click', (e) => {
+            if (e.target === previewModal) closePreviewModal();
+        });
+
+        orderModal.addEventListener('click', (e) => {
+            if (e.target === orderModal) closeOrderModal();
+        });
+
+        // Close Modals on ESC Key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closePreviewModal();
+                closeOrderModal();
+            }
+        });
+    </script>
+</body>
+
+</html>

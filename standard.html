@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Invitation — Standard Plan | WEB INVITES</title>
+    <meta name="description" content="Customize your Standard digital wedding invitation. Fill in your details and we'll create your personalized invite.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-primary: #FAF8F5;
+            --bg-cream: #F5EFE6;
+            --bg-card: #FFFFFF;
+            --ink: #1B1C18;
+            --ink-soft: #44483D;
+            --ink-muted: #66695F;
+            --emerald-primary: #0F382C;
+            --emerald-dark: #08241C;
+            --emerald-light: #E8F0EC;
+            --sage-50: #F4F7F4;
+            --sage-100: #E3EBE3;
+            --sage-500: #6E8569;
+            --sage-600: #4C6546;
+            --champagne-400: #C9A86A;
+            --champagne-500: #B28F42;
+            --champagne-600: #8C6D2B;
+            --blush-600: #B5294E;
+            --border-subtle: rgba(76, 101, 70, 0.12);
+            --border-gold: rgba(201, 168, 106, 0.35);
+            --shadow-soft: 0 4px 20px rgba(27, 28, 24, 0.05);
+            --shadow-md: 0 8px 30px rgba(27, 28, 24, 0.08);
+            --font-serif: 'Noto Serif', 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Cormorant Garamond', serif;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--ink);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+        }
+
+        /* NAV */
+        .top-nav {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(250,248,245,0.94);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 0 24px; height: 64px;
+            display: flex; align-items: center; gap: 16px;
+        }
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-size: 0.85rem; font-weight: 600; color: var(--ink-soft);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .back-btn:hover { color: var(--emerald-primary); }
+        .nav-logo {
+            font-family: var(--font-display); font-size: 1.45rem;
+            font-weight: 700; color: var(--emerald-primary);
+            margin-left: auto; letter-spacing: -0.02em;
+        }
+
+        /* HERO */
+        .page-hero {
+            background: linear-gradient(135deg, var(--emerald-primary) 0%, var(--sage-600) 100%);
+            padding: 56px 24px 48px; text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .page-hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        .hero-eyebrow {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255,255,255,0.15); backdrop-filter: blur(6px);
+            border: 1px solid rgba(255,255,255,0.2); border-radius: 100px;
+            padding: 6px 18px; font-size: 0.76rem; font-weight: 700;
+            letter-spacing: 0.15em; text-transform: uppercase;
+            color: rgba(255,255,255,0.9); margin-bottom: 20px;
+            position: relative;
+        }
+        .page-hero h1 {
+            font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 600; color: #fff; line-height: 1.2;
+            margin-bottom: 12px; position: relative;
+        }
+        .page-hero p {
+            font-size: 1rem; color: rgba(255,255,255,0.75);
+            max-width: 520px; margin: 0 auto; position: relative;
+        }
+
+        /* TEMPLATE BADGE */
+        .template-badge-bar {
+            max-width: 680px; margin: -24px auto 0;
+            padding: 0 24px; position: relative; z-index: 10;
+        }
+        .template-badge {
+            background: var(--bg-card); border-radius: 16px;
+            border: 1.5px solid var(--border-gold);
+            padding: 18px 24px; display: flex; align-items: center;
+            gap: 16px; box-shadow: var(--shadow-md);
+        }
+        .badge-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            background: var(--sage-100); color: var(--sage-600);
+            display: grid; place-items: center; font-size: 1.3rem; flex-shrink: 0;
+        }
+        .badge-info { flex: 1; min-width: 0; }
+        .badge-tier {
+            font-size: 0.7rem; font-weight: 800; letter-spacing: 0.15em;
+            text-transform: uppercase; color: var(--champagne-600); margin-bottom: 2px;
+        }
+        .badge-name {
+            font-family: var(--font-serif); font-size: 1.15rem;
+            font-weight: 700; font-style: italic; color: var(--emerald-primary);
+        }
+        .badge-id {
+            font-size: 0.75rem; font-weight: 700; color: var(--ink-muted);
+            background: var(--sage-50); border: 1px solid var(--border-subtle);
+            border-radius: 6px; padding: 4px 10px; letter-spacing: 0.05em;
+        }
+
+        /* FORM AREA */
+        .form-wrapper {
+            max-width: 680px; margin: 32px auto 80px; padding: 0 24px;
+        }
+        .form-section-card {
+            background: var(--bg-card); border-radius: 20px;
+            border: 1.5px solid var(--border-subtle);
+            box-shadow: var(--shadow-soft);
+            padding: 36px 32px; margin-bottom: 24px;
+        }
+        .section-card-header {
+            display: flex; align-items: center; gap: 14px;
+            margin-bottom: 28px; padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .section-card-icon {
+            width: 42px; height: 42px; border-radius: 10px;
+            background: var(--emerald-light); color: var(--emerald-primary);
+            display: grid; place-items: center; flex-shrink: 0;
+        }
+        .section-card-title {
+            font-family: var(--font-serif); font-size: 1.3rem;
+            font-weight: 700; color: var(--emerald-primary);
+        }
+        .section-card-sub { font-size: 0.82rem; color: var(--ink-muted); margin-top: 2px; }
+
+        /* FIELDS */
+        .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        @media (max-width: 540px) {
+            .field-row { grid-template-columns: 1fr; }
+            .form-section-card { padding: 24px 18px; }
+        }
+        .field-group { margin-bottom: 20px; }
+        .field-label {
+            display: flex; align-items: center; gap: 6px;
+            font-size: 0.78rem; font-weight: 700; color: var(--ink-soft);
+            text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px;
+        }
+        .field-label .req { color: var(--blush-600); }
+        .field-input {
+            width: 100%; padding: 13px 16px; border-radius: 12px;
+            border: 1.5px solid var(--border-subtle); background: var(--bg-primary);
+            font-family: var(--font-sans); font-size: 0.95rem; color: var(--ink);
+            outline: none; transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .field-input::placeholder { color: var(--ink-muted); opacity: 0.6; }
+        .field-input:focus {
+            border-color: var(--emerald-primary);
+            box-shadow: 0 0 0 3px rgba(15, 56, 44, 0.08); background: #fff;
+        }
+
+        /* DISPLAY ORDER TOGGLE */
+        .display-order-group { margin-bottom: 20px; }
+        .toggle-label {
+            font-size: 0.78rem; font-weight: 700; color: var(--ink-soft);
+            text-transform: uppercase; letter-spacing: 0.06em;
+            margin-bottom: 10px; display: block;
+        }
+        .order-toggle-row { display: flex; gap: 10px; }
+        .order-toggle-btn {
+            flex: 1; padding: 12px 10px; border-radius: 10px;
+            border: 1.5px solid var(--border-subtle); background: transparent;
+            font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600;
+            color: var(--ink-soft); cursor: pointer; transition: all 0.2s ease;
+            text-align: center; display: flex; flex-direction: column;
+            align-items: center; gap: 4px;
+        }
+        .order-toggle-btn.selected {
+            border-color: var(--emerald-primary);
+            background: var(--emerald-light); color: var(--emerald-primary);
+        }
+        .order-toggle-btn:hover:not(.selected) {
+            border-color: var(--sage-500); background: var(--sage-50);
+        }
+
+        /* DATE/TIME */
+        .dt-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        @media (max-width: 420px) { .dt-row { grid-template-columns: 1fr; } }
+        .dt-input-wrap { position: relative; }
+        .dt-icon {
+            position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+            color: var(--champagne-500); font-size: 1.1rem; pointer-events: none;
+        }
+
+        /* SUBMIT */
+        .btn-submit {
+            width: 100%; padding: 16px 24px; border-radius: 14px;
+            background: linear-gradient(135deg, #25D366 0%, #1DA851 100%);
+            color: #FFFFFF; font-family: var(--font-sans); font-size: 1.05rem;
+            font-weight: 700; border: none; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+            transition: all 0.3s ease; letter-spacing: 0.02em;
+        }
+        .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(37, 211, 102, 0.45); }
+        .privacy-note {
+            text-align: center; font-size: 0.78rem; color: var(--ink-muted);
+            margin-top: 14px; display: flex; align-items: center;
+            justify-content: center; gap: 6px;
+        }
+
+        /* FLOATING WA */
+        .floating-wa {
+            position: fixed; bottom: 28px; right: 28px; width: 56px; height: 56px;
+            border-radius: 50%; background: #25D366; color: #fff;
+            display: grid; place-items: center; font-size: 1.6rem;
+            box-shadow: 0 8px 25px rgba(37,211,102,0.4);
+            transition: transform 0.2s; text-decoration: none; z-index: 999;
+        }
+        .floating-wa:hover { transform: scale(1.1); }
+
+        /* ANIMATIONS */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-up { animation: fadeUp 0.5s ease forwards; opacity: 0; }
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="top-nav">
+        <a href="index.html" class="back-btn">
+            <span class="material-symbols-outlined" style="font-size:18px;">arrow_back</span>
+            Back to Templates
+        </a>
+        <div class="nav-logo">WEB INVITES</div>
+    </nav>
+
+    <!-- HERO HEADER -->
+    <div class="page-hero">
+        <div class="hero-eyebrow">
+            <span class="material-symbols-outlined" style="font-size:15px;">star_border</span>
+            Standard Plan &middot; &#8377;249
+        </div>
+        <h1>Customize Your<br><em>Invitation Details</em></h1>
+        <p>Fill in the details below and we'll craft your personalized digital invitation with care.</p>
+    </div>
+
+    <!-- TEMPLATE BADGE -->
+    <div class="template-badge-bar animate-up">
+        <div class="template-badge">
+            <div class="badge-icon">
+                <span class="material-symbols-outlined">card_membership</span>
+            </div>
+            <div class="badge-info">
+                <div class="badge-tier">Standard Template</div>
+                <div class="badge-name" id="templateNameDisplay">Loading&hellip;</div>
+            </div>
+            <div class="badge-id" id="templateIdDisplay">ID: ----</div>
+        </div>
+    </div>
+
+    <!-- MAIN FORM -->
+    <div class="form-wrapper">
+        <form id="standardForm" onsubmit="handleSubmit(event)" novalidate>
+
+            <!-- COUPLE DETAILS -->
+            <div class="form-section-card animate-up delay-1">
+                <div class="section-card-header">
+                    <div class="section-card-icon">
+                        <span class="material-symbols-outlined">favorite</span>
+                    </div>
+                    <div>
+                        <div class="section-card-title">Couple Details</div>
+                        <div class="section-card-sub">Names and family information</div>
+                    </div>
+                </div>
+
+                <!-- Display Order -->
+                <div class="display-order-group">
+                    <span class="toggle-label">Display Order on Invitation <span style="color:var(--blush-600);">*</span></span>
+                    <div class="order-toggle-row">
+                        <button type="button" class="order-toggle-btn selected" id="orderBrideFirst" onclick="setDisplayOrder('bride_first')">
+                            <span style="font-size:1.2rem;">&#128144;</span>
+                            Bride's Name First
+                        </button>
+                        <button type="button" class="order-toggle-btn" id="orderGroomFirst" onclick="setDisplayOrder('groom_first')">
+                            <span style="font-size:1.2rem;">&#129333;</span>
+                            Groom's Name First
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Names -->
+                <div class="field-row">
+                    <div class="field-group">
+                        <label class="field-label" for="brideName">
+                            Bride's Name <span class="req">*</span>
+                        </label>
+                        <input type="text" class="field-input" id="brideName" placeholder="e.g. Ayesha Fathima" required>
+                    </div>
+                    <div class="field-group">
+                        <label class="field-label" for="groomName">
+                            Groom's Name <span class="req">*</span>
+                        </label>
+                        <input type="text" class="field-input" id="groomName" placeholder="e.g. Mohammed Hamza" required>
+                    </div>
+                </div>
+
+                <!-- Parents -->
+                <div class="field-row">
+                    <div class="field-group" style="margin-bottom:0;">
+                        <label class="field-label" for="brideParents">Bride's Parents</label>
+                        <input type="text" class="field-input" id="brideParents" placeholder="e.g. Mr. &amp; Mrs. Rajan Sharma">
+                    </div>
+                    <div class="field-group" style="margin-bottom:0;">
+                        <label class="field-label" for="groomParents">Groom's Parents</label>
+                        <input type="text" class="field-input" id="groomParents" placeholder="e.g. Mr. &amp; Mrs. Vijay Menon">
+                    </div>
+                </div>
+            </div>
+
+            <!-- EVENT DETAILS -->
+            <div class="form-section-card animate-up delay-2">
+                <div class="section-card-header">
+                    <div class="section-card-icon">
+                        <span class="material-symbols-outlined">event</span>
+                    </div>
+                    <div>
+                        <div class="section-card-title">Event Details</div>
+                        <div class="section-card-sub">Date, time, and venue information</div>
+                    </div>
+                </div>
+
+                <!-- Date & Time -->
+                <div class="dt-row" style="margin-bottom:20px;">
+                    <div class="field-group" style="margin-bottom:0;">
+                        <label class="field-label" for="eventDate">
+                            Event Date <span class="req">*</span>
+                        </label>
+                        <div class="dt-input-wrap">
+                            <span class="material-symbols-outlined dt-icon">calendar_today</span>
+                            <input type="date" class="field-input" id="eventDate" style="padding-left:44px;" required>
+                        </div>
+                    </div>
+                    <div class="field-group" style="margin-bottom:0;">
+                        <label class="field-label" for="eventTime">
+                            Event Time <span class="req">*</span>
+                        </label>
+                        <div class="dt-input-wrap">
+                            <span class="material-symbols-outlined dt-icon">schedule</span>
+                            <input type="time" class="field-input" id="eventTime" style="padding-left:44px;" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venue -->
+                <div class="field-group">
+                    <label class="field-label" for="venueName">
+                        Venue Name <span class="req">*</span>
+                    </label>
+                    <input type="text" class="field-input" id="venueName" placeholder="e.g. The Grand Ballroom, Taj Hotel" required>
+                </div>
+                <div class="field-group" style="margin-bottom:0;">
+                    <label class="field-label" for="venueAddress">Venue Address</label>
+                    <input type="text" class="field-input" id="venueAddress" placeholder="Street, City, State">
+                </div>
+            </div>
+
+            <!-- SUBMIT -->
+            <div class="form-section-card animate-up delay-3" style="padding:28px 32px;">
+                <button type="submit" class="btn-submit">
+                    <i class="fa-brands fa-whatsapp" style="font-size:1.3rem;"></i>
+                    Send Details to WhatsApp
+                </button>
+                <p class="privacy-note">
+                    <span class="material-symbols-outlined" style="font-size:14px;">lock</span>
+                    Details go directly to our team via WhatsApp. We don't store any data.
+                </p>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- FLOATING WA -->
+    <a href="https://wa.me/919778513196" target="_blank" class="floating-wa" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Read URL params
+        const params = new URLSearchParams(window.location.search);
+        const templateId   = params.get('id')   || '0001';
+        const templateName = params.get('name') || 'Standard Template';
+
+        document.getElementById('templateNameDisplay').textContent = templateName;
+        document.getElementById('templateIdDisplay').textContent   = 'ID: ' + templateId;
+        document.title = 'Customize — ' + templateName + ' | WEB INVITES';
+
+        // Display Order Toggle
+        let displayOrder = 'bride_first';
+        function setDisplayOrder(val) {
+            displayOrder = val;
+            document.getElementById('orderBrideFirst').classList.toggle('selected', val === 'bride_first');
+            document.getElementById('orderGroomFirst').classList.toggle('selected', val === 'groom_first');
+        }
+
+        // Format helpers
+        function formatDate(dateStr) {
+            if (!dateStr) return 'Not provided';
+            const d = new Date(dateStr + 'T00:00:00');
+            return d.toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+        }
+        function formatTime(timeStr) {
+            if (!timeStr) return 'Not provided';
+            const [h, m] = timeStr.split(':');
+            const hr = parseInt(h);
+            const ampm = hr >= 12 ? 'PM' : 'AM';
+            const hour12 = hr % 12 || 12;
+            return hour12 + ':' + m + ' ' + ampm;
+        }
+
+        // Form Submit
+        function handleSubmit(e) {
+            e.preventDefault();
+            const bride        = document.getElementById('brideName').value.trim();
+            const groom        = document.getElementById('groomName').value.trim();
+            const brideParents = document.getElementById('brideParents').value.trim();
+            const groomParents = document.getElementById('groomParents').value.trim();
+            const dateVal      = document.getElementById('eventDate').value;
+            const timeVal      = document.getElementById('eventTime').value;
+            const venue        = document.getElementById('venueName').value.trim();
+            const address      = document.getElementById('venueAddress').value.trim();
+
+            if (!bride || !groom || !dateVal || !timeVal || !venue) {
+                alert('Please fill in all required fields (marked with *).');
+                return;
+            }
+
+            const coupleDisplay = displayOrder === 'bride_first'
+                ? bride + ' & ' + groom
+                : groom + ' & ' + bride;
+            const orderLabel = displayOrder === 'bride_first' ? "Bride's Name First" : "Groom's Name First";
+
+            const message =
+'Hello WEB INVITES Team! 👋\n\n' +
+'I\'d like to customize my Standard digital invitation.\n\n' +
+'🎨 *Template Details*\n' +
+'• Template ID: ' + templateId + '\n' +
+'• Template Name: ' + templateName + '\n' +
+'• Plan: Standard (₹249)\n\n' +
+'💑 *Couple Information*\n' +
+'• Couple: ' + coupleDisplay + '\n' +
+'• Display Order: ' + orderLabel + '\n' +
+'• Bride\'s Name: ' + bride + '\n' +
+'• Groom\'s Name: ' + groom + '\n' +
+'• Bride\'s Parents: ' + (brideParents || 'Not provided') + '\n' +
+'• Groom\'s Parents: ' + (groomParents || 'Not provided') + '\n\n' +
+'📅 *Event Details*\n' +
+'• Date: ' + formatDate(dateVal) + '\n' +
+'• Time: ' + formatTime(timeVal) + '\n' +
+'• Venue: ' + venue + '\n' +
+'• Address: ' + (address || 'Not provided') + '\n\n' +
+'Please proceed with my invitation. Thank you! 🌸';
+
+            const encoded = encodeURIComponent(message);
+            window.open('https://wa.me/919778513196?text=' + encoded, '_blank');
+        }
+    </script>
+
+</body>
+</html>

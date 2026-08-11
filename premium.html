@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Invitation — Premium Plan | WEB INVITES</title>
+    <meta name="description" content="Customize your Premium digital wedding invitation with story, photos, RSVP and more.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-primary: #FAF8F5;
+            --bg-cream: #F5EFE6;
+            --bg-card: #FFFFFF;
+            --ink: #1B1C18;
+            --ink-soft: #44483D;
+            --ink-muted: #66695F;
+            --emerald-primary: #0F382C;
+            --emerald-dark: #08241C;
+            --emerald-light: #E8F0EC;
+            --sage-50: #F4F7F4;
+            --sage-100: #E3EBE3;
+            --sage-500: #6E8569;
+            --sage-600: #4C6546;
+            --champagne-100: #F3EAD5;
+            --champagne-200: #E9D8B2;
+            --champagne-400: #C9A86A;
+            --champagne-500: #B28F42;
+            --champagne-600: #8C6D2B;
+            --blush-100: #FCE8EC;
+            --blush-600: #B5294E;
+            --border-subtle: rgba(76, 101, 70, 0.12);
+            --border-gold: rgba(201, 168, 106, 0.35);
+            --shadow-soft: 0 4px 20px rgba(27, 28, 24, 0.05);
+            --shadow-md: 0 8px 30px rgba(27, 28, 24, 0.08);
+            --shadow-lg: 0 20px 45px rgba(27, 28, 24, 0.12);
+            --font-serif: 'Noto Serif', 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Cormorant Garamond', serif;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--ink);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+        }
+
+        /* NAV */
+        .top-nav {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(250,248,245,0.94);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 0 24px; height: 64px;
+            display: flex; align-items: center; gap: 16px;
+        }
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-size: 0.85rem; font-weight: 600; color: var(--ink-soft);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .back-btn:hover { color: var(--emerald-primary); }
+        .nav-logo {
+            font-family: var(--font-display); font-size: 1.45rem;
+            font-weight: 700; color: var(--emerald-primary);
+            margin-left: auto; letter-spacing: -0.02em;
+        }
+
+        /* HERO */
+        .page-hero {
+            background: linear-gradient(135deg, #0E0A00 0%, #2C1810 40%, #1a3326 100%);
+            padding: 56px 24px 48px; text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .page-hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C9A86A' fill-opacity='0.06'%3E%3Ccircle cx='30' cy='30' r='3'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        .hero-eyebrow {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(201,168,106,0.15); backdrop-filter: blur(6px);
+            border: 1px solid rgba(201,168,106,0.3); border-radius: 100px;
+            padding: 6px 18px; font-size: 0.76rem; font-weight: 700;
+            letter-spacing: 0.15em; text-transform: uppercase;
+            color: var(--champagne-400); margin-bottom: 20px; position: relative;
+        }
+        .page-hero h1 {
+            font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 600; color: #fff; line-height: 1.2;
+            margin-bottom: 12px; position: relative;
+        }
+        .page-hero h1 em { color: var(--champagne-400); }
+        .page-hero p {
+            font-size: 1rem; color: rgba(255,255,255,0.65);
+            max-width: 520px; margin: 0 auto; position: relative;
+        }
+
+        /* SECTION DIVIDER */
+        .section-divider {
+            max-width: 760px; margin: 40px auto 0; padding: 0 24px;
+        }
+        .divider-label {
+            display: flex; align-items: center; gap: 14px;
+            font-size: 0.72rem; font-weight: 800; letter-spacing: 0.2em;
+            text-transform: uppercase; color: var(--champagne-600);
+        }
+        .divider-label::before, .divider-label::after {
+            content: ''; flex: 1; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border-gold), transparent);
+        }
+
+        /* TEMPLATE BADGE */
+        .template-badge-bar {
+            max-width: 760px; margin: -24px auto 0;
+            padding: 0 24px; position: relative; z-index: 10;
+        }
+        .template-badge {
+            background: var(--bg-card); border-radius: 16px;
+            border: 1.5px solid var(--border-gold);
+            padding: 18px 24px; display: flex; align-items: center;
+            gap: 16px; box-shadow: var(--shadow-md);
+        }
+        .badge-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            background: linear-gradient(135deg, var(--champagne-100), var(--champagne-200));
+            color: var(--champagne-600);
+            display: grid; place-items: center; font-size: 1.3rem; flex-shrink: 0;
+        }
+        .badge-info { flex: 1; min-width: 0; }
+        .badge-tier {
+            font-size: 0.7rem; font-weight: 800; letter-spacing: 0.15em;
+            text-transform: uppercase; color: var(--champagne-600); margin-bottom: 2px;
+        }
+        .badge-name {
+            font-family: var(--font-serif); font-size: 1.15rem;
+            font-weight: 700; font-style: italic; color: var(--emerald-primary);
+        }
+        .badge-id {
+            font-size: 0.75rem; font-weight: 700; color: var(--champagne-600);
+            background: linear-gradient(135deg, var(--champagne-100), #fff);
+            border: 1px solid var(--border-gold);
+            border-radius: 6px; padding: 4px 10px; letter-spacing: 0.05em;
+        }
+
+        /* FORM AREA */
+        .form-wrapper {
+            max-width: 760px; margin: 32px auto 80px; padding: 0 24px;
+        }
+        .form-section-card {
+            background: var(--bg-card); border-radius: 20px;
+            border: 1.5px solid var(--border-subtle);
+            box-shadow: var(--shadow-soft);
+            padding: 36px 32px; margin-bottom: 24px;
+        }
+        .form-section-card.premium-card {
+            border-color: var(--border-gold);
+        }
+        .section-card-header {
+            display: flex; align-items: center; gap: 14px;
+            margin-bottom: 28px; padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .section-card-icon {
+            width: 42px; height: 42px; border-radius: 10px;
+            background: var(--emerald-light); color: var(--emerald-primary);
+            display: grid; place-items: center; flex-shrink: 0;
+        }
+        .section-card-icon.gold {
+            background: linear-gradient(135deg, var(--champagne-100), var(--champagne-200));
+            color: var(--champagne-600);
+        }
+        .section-card-title {
+            font-family: var(--font-serif); font-size: 1.3rem;
+            font-weight: 700; color: var(--emerald-primary);
+        }
+        .section-card-sub { font-size: 0.82rem; color: var(--ink-muted); margin-top: 2px; }
+
+        /* FIELDS */
+        .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .field-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+        @media (max-width: 580px) {
+            .field-row, .field-row-3 { grid-template-columns: 1fr; }
+            .form-section-card { padding: 24px 18px; }
+        }
+        .field-group { margin-bottom: 20px; }
+        .field-label {
+            display: flex; align-items: center; gap: 6px;
+            font-size: 0.78rem; font-weight: 700; color: var(--ink-soft);
+            text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px;
+        }
+        .field-label .req { color: var(--blush-600); }
+        .field-input {
+            width: 100%; padding: 13px 16px; border-radius: 12px;
+            border: 1.5px solid var(--border-subtle); background: var(--bg-primary);
+            font-family: var(--font-sans); font-size: 0.95rem; color: var(--ink);
+            outline: none; transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .field-input::placeholder { color: var(--ink-muted); opacity: 0.6; }
+        .field-input:focus {
+            border-color: var(--emerald-primary);
+            box-shadow: 0 0 0 3px rgba(15, 56, 44, 0.08); background: #fff;
+        }
+        .field-textarea {
+            width: 100%; padding: 13px 16px; border-radius: 12px;
+            border: 1.5px solid var(--border-subtle); background: var(--bg-primary);
+            font-family: var(--font-sans); font-size: 0.95rem; color: var(--ink);
+            outline: none; resize: vertical; min-height: 110px;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            line-height: 1.6;
+        }
+        .field-textarea::placeholder { color: var(--ink-muted); opacity: 0.6; }
+        .field-textarea:focus {
+            border-color: var(--emerald-primary);
+            box-shadow: 0 0 0 3px rgba(15, 56, 44, 0.08); background: #fff;
+        }
+
+        /* DISPLAY ORDER TOGGLE */
+        .display-order-group { margin-bottom: 20px; }
+        .toggle-label {
+            font-size: 0.78rem; font-weight: 700; color: var(--ink-soft);
+            text-transform: uppercase; letter-spacing: 0.06em;
+            margin-bottom: 10px; display: block;
+        }
+        .order-toggle-row { display: flex; gap: 10px; }
+        .order-toggle-btn {
+            flex: 1; padding: 12px 10px; border-radius: 10px;
+            border: 1.5px solid var(--border-subtle); background: transparent;
+            font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600;
+            color: var(--ink-soft); cursor: pointer; transition: all 0.2s ease;
+            text-align: center; display: flex; flex-direction: column;
+            align-items: center; gap: 4px;
+        }
+        .order-toggle-btn.selected {
+            border-color: var(--emerald-primary);
+            background: var(--emerald-light); color: var(--emerald-primary);
+        }
+        .order-toggle-btn:hover:not(.selected) {
+            border-color: var(--sage-500); background: var(--sage-50);
+        }
+
+        /* DATE/TIME PICKERS */
+        .dt-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        @media (max-width: 420px) { .dt-row { grid-template-columns: 1fr; } }
+        .dt-input-wrap { position: relative; }
+        .dt-icon {
+            position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+            color: var(--champagne-500); font-size: 1.1rem; pointer-events: none;
+        }
+
+        /* WELCOME NOTE PRESETS */
+        .preset-notes-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px;
+        }
+        @media (max-width: 480px) { .preset-notes-grid { grid-template-columns: 1fr; } }
+        .preset-note-btn {
+            padding: 12px 14px; border-radius: 10px;
+            border: 1.5px solid var(--border-subtle); background: var(--bg-primary);
+            font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-soft);
+            cursor: pointer; text-align: left; line-height: 1.5;
+            transition: all 0.2s ease;
+        }
+        .preset-note-btn:hover {
+            border-color: var(--champagne-400); background: var(--champagne-100);
+            color: var(--emerald-primary);
+        }
+        .preset-note-btn.active {
+            border-color: var(--champagne-500); background: var(--champagne-100);
+            color: var(--emerald-primary); font-weight: 600;
+        }
+        .preset-label {
+            display: flex; align-items: center; gap: 8px;
+            font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
+            text-transform: uppercase; color: var(--champagne-600);
+            margin-bottom: 12px;
+        }
+        .preset-label span { flex: 1; height: 1px; background: var(--border-gold); }
+        .custom-note-label {
+            font-size: 0.78rem; font-weight: 700; color: var(--ink-soft);
+            text-transform: uppercase; letter-spacing: 0.06em;
+            margin-bottom: 8px; display: block; margin-top: 16px;
+        }
+
+        /* RSVP TOGGLE */
+        .rsvp-toggle-row {
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 16px; padding: 18px 20px; border-radius: 12px;
+            border: 1.5px solid var(--border-subtle); background: var(--bg-primary);
+            cursor: pointer; transition: all 0.2s;
+        }
+        .rsvp-toggle-row:hover { border-color: var(--emerald-primary); background: var(--sage-50); }
+        .rsvp-info h4 { font-family: var(--font-serif); font-size: 1.05rem; color: var(--emerald-primary); }
+        .rsvp-info p { font-size: 0.82rem; color: var(--ink-muted); margin-top: 2px; }
+        .toggle-switch {
+            position: relative; width: 52px; height: 28px; flex-shrink: 0;
+        }
+        .toggle-switch input { opacity: 0; width: 0; height: 0; }
+        .toggle-slider {
+            position: absolute; inset: 0; background: var(--sage-100);
+            border-radius: 100px; cursor: pointer; transition: 0.3s;
+        }
+        .toggle-slider::before {
+            content: ''; position: absolute;
+            height: 20px; width: 20px; left: 4px; bottom: 4px;
+            background: white; border-radius: 50%;
+            transition: 0.3s; box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+        .toggle-switch input:checked + .toggle-slider { background: var(--emerald-primary); }
+        .toggle-switch input:checked + .toggle-slider::before { transform: translateX(24px); }
+
+        /* PHOTO NOTE */
+        .photo-note {
+            background: linear-gradient(135deg, var(--champagne-100), #fff8f0);
+            border: 1.5px dashed var(--champagne-400);
+            border-radius: 12px; padding: 20px 22px;
+            display: flex; align-items: flex-start; gap: 14px;
+        }
+        .photo-note-icon {
+            font-size: 1.4rem; flex-shrink: 0; color: var(--champagne-500); margin-top: 2px;
+        }
+        .photo-note-text h4 {
+            font-family: var(--font-serif); font-size: 1rem;
+            color: var(--emerald-primary); margin-bottom: 4px;
+        }
+        .photo-note-text p { font-size: 0.84rem; color: var(--ink-muted); line-height: 1.5; }
+
+        /* SUBMIT */
+        .btn-submit {
+            width: 100%; padding: 16px 24px; border-radius: 14px;
+            background: linear-gradient(135deg, #25D366 0%, #1DA851 100%);
+            color: #FFFFFF; font-family: var(--font-sans); font-size: 1.05rem;
+            font-weight: 700; border: none; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+            transition: all 0.3s ease; letter-spacing: 0.02em;
+        }
+        .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(37, 211, 102, 0.45); }
+        .privacy-note {
+            text-align: center; font-size: 0.78rem; color: var(--ink-muted);
+            margin-top: 14px; display: flex; align-items: center;
+            justify-content: center; gap: 6px;
+        }
+
+        /* STEP INDICATORS */
+        .steps-indicator {
+            max-width: 760px; margin: 32px auto 0; padding: 0 24px;
+            display: flex; align-items: center; gap: 0;
+        }
+        .step-pill {
+            display: flex; align-items: center; gap: 8px;
+            font-size: 0.78rem; font-weight: 700; color: var(--ink-muted);
+        }
+        .step-pill.active { color: var(--emerald-primary); }
+        .step-circle {
+            width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--border-subtle);
+            display: grid; place-items: center; font-size: 0.75rem; font-weight: 700;
+        }
+        .step-pill.active .step-circle {
+            background: var(--emerald-primary); border-color: var(--emerald-primary); color: #fff;
+        }
+        .step-connector { flex: 1; height: 2px; background: var(--border-subtle); margin: 0 8px; }
+
+        /* FLOATING WA */
+        .floating-wa {
+            position: fixed; bottom: 28px; right: 28px; width: 56px; height: 56px;
+            border-radius: 50%; background: #25D366; color: #fff;
+            display: grid; place-items: center; font-size: 1.6rem;
+            box-shadow: 0 8px 25px rgba(37,211,102,0.4);
+            transition: transform 0.2s; text-decoration: none; z-index: 999;
+        }
+        .floating-wa:hover { transform: scale(1.1); }
+
+        /* ANIMATIONS */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-up { animation: fadeUp 0.5s ease forwards; opacity: 0; }
+        .delay-1 { animation-delay: 0.08s; }
+        .delay-2 { animation-delay: 0.16s; }
+        .delay-3 { animation-delay: 0.24s; }
+        .delay-4 { animation-delay: 0.32s; }
+        .delay-5 { animation-delay: 0.40s; }
+        .delay-6 { animation-delay: 0.48s; }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="top-nav">
+        <a href="index.html" class="back-btn">
+            <span class="material-symbols-outlined" style="font-size:18px;">arrow_back</span>
+            Back to Templates
+        </a>
+        <div class="nav-logo">WEB INVITES</div>
+    </nav>
+
+    <!-- HERO HEADER -->
+    <div class="page-hero">
+        <div class="hero-eyebrow">
+            <span class="material-symbols-outlined" style="font-size:15px;">workspace_premium</span>
+            Premium Plan &middot; &#8377;499
+        </div>
+        <h1>Craft Your<br><em>Dream Invitation</em></h1>
+        <p>The ultimate digital invitation experience — tell your love story beautifully.</p>
+    </div>
+
+    <!-- TEMPLATE BADGE -->
+    <div class="template-badge-bar animate-up">
+        <div class="template-badge">
+            <div class="badge-icon">
+                <span class="material-symbols-outlined">workspace_premium</span>
+            </div>
+            <div class="badge-info">
+                <div class="badge-tier">Premium Template</div>
+                <div class="badge-name" id="templateNameDisplay">Loading&hellip;</div>
+            </div>
+            <div class="badge-id" id="templateIdDisplay">ID: ----</div>
+        </div>
+    </div>
+
+    <!-- STEP INDICATORS -->
+    <div class="steps-indicator animate-up delay-1">
+        <div class="step-pill active">
+            <div class="step-circle">1</div>
+            Event Details
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-pill active">
+            <div class="step-circle">2</div>
+            Story &amp; RSVP
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 1 — EVENT DETAILS
+    ══════════════════════════════════════════ -->
+    <div class="section-divider animate-up delay-1" style="margin-top:32px;">
+        <div class="divider-label">Section 1 &mdash; Event Details</div>
+    </div>
+
+    <div class="form-wrapper" id="section1" style="margin-top:16px; margin-bottom:0;">
+
+        <!-- COUPLE DETAILS CARD -->
+        <div class="form-section-card premium-card animate-up delay-2">
+            <div class="section-card-header">
+                <div class="section-card-icon gold">
+                    <span class="material-symbols-outlined">favorite</span>
+                </div>
+                <div>
+                    <div class="section-card-title">Couple Details</div>
+                    <div class="section-card-sub">Names, display order and family</div>
+                </div>
+            </div>
+
+            <!-- Display Order -->
+            <div class="display-order-group">
+                <span class="toggle-label">Display Order on Invitation <span style="color:var(--blush-600);">*</span></span>
+                <div class="order-toggle-row">
+                    <button type="button" class="order-toggle-btn selected" id="orderBrideFirst" onclick="setDisplayOrder('bride_first')">
+                        <span style="font-size:1.2rem;">&#128144;</span>
+                        Bride's Name First
+                    </button>
+                    <button type="button" class="order-toggle-btn" id="orderGroomFirst" onclick="setDisplayOrder('groom_first')">
+                        <span style="font-size:1.2rem;">&#129333;</span>
+                        Groom's Name First
+                    </button>
+                </div>
+            </div>
+
+            <!-- Names -->
+            <div class="field-row">
+                <div class="field-group">
+                    <label class="field-label" for="brideName">Bride's Name <span class="req">*</span></label>
+                    <input type="text" class="field-input" id="brideName" placeholder="e.g. Ayesha Fathima" required>
+                </div>
+                <div class="field-group">
+                    <label class="field-label" for="groomName">Groom's Name <span class="req">*</span></label>
+                    <input type="text" class="field-input" id="groomName" placeholder="e.g. Mohammed Hamza" required>
+                </div>
+            </div>
+
+            <!-- Parents -->
+            <div class="field-row">
+                <div class="field-group" style="margin-bottom:0;">
+                    <label class="field-label" for="brideParents">Bride's Parents</label>
+                    <input type="text" class="field-input" id="brideParents" placeholder="e.g. Mr. &amp; Mrs. Rajan Sharma">
+                </div>
+                <div class="field-group" style="margin-bottom:0;">
+                    <label class="field-label" for="groomParents">Groom's Parents</label>
+                    <input type="text" class="field-input" id="groomParents" placeholder="e.g. Mr. &amp; Mrs. Vijay Menon">
+                </div>
+            </div>
+        </div>
+
+        <!-- EVENT DETAILS CARD -->
+        <div class="form-section-card premium-card animate-up delay-3">
+            <div class="section-card-header">
+                <div class="section-card-icon gold">
+                    <span class="material-symbols-outlined">event</span>
+                </div>
+                <div>
+                    <div class="section-card-title">Event Information</div>
+                    <div class="section-card-sub">Occasion, venue, date and time</div>
+                </div>
+            </div>
+
+            <!-- Occasion type -->
+            <div class="field-group">
+                <label class="field-label" for="occasionType">Occasion / Event Type <span class="req">*</span></label>
+                <input type="text" class="field-input" id="occasionType" placeholder="e.g. Wedding, Nikah, Reception, Engagement" required>
+            </div>
+
+            <!-- Date & Time -->
+            <div class="dt-row" style="margin-bottom:20px;">
+                <div class="field-group" style="margin-bottom:0;">
+                    <label class="field-label" for="eventDate">Event Date <span class="req">*</span></label>
+                    <div class="dt-input-wrap">
+                        <span class="material-symbols-outlined dt-icon">calendar_today</span>
+                        <input type="date" class="field-input" id="eventDate" style="padding-left:44px;" required>
+                    </div>
+                </div>
+                <div class="field-group" style="margin-bottom:0;">
+                    <label class="field-label" for="eventTime">Event Time <span class="req">*</span></label>
+                    <div class="dt-input-wrap">
+                        <span class="material-symbols-outlined dt-icon">schedule</span>
+                        <input type="time" class="field-input" id="eventTime" style="padding-left:44px;" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Venue -->
+            <div class="field-group">
+                <label class="field-label" for="venueName">Venue Name <span class="req">*</span></label>
+                <input type="text" class="field-input" id="venueName" placeholder="e.g. The Grand Ballroom, Taj Hotel" required>
+            </div>
+
+            <!-- Google Maps -->
+            <div class="field-group" style="margin-bottom:0;">
+                <label class="field-label" for="mapsLink">
+                    <span class="material-symbols-outlined" style="font-size:13px;">map</span>
+                    Google Maps Link
+                </label>
+                <div class="dt-input-wrap">
+                    <span class="material-symbols-outlined dt-icon" style="color:var(--sage-500);">pin_drop</span>
+                    <input type="url" class="field-input" id="mapsLink" style="padding-left:44px;"
+                        placeholder="https://maps.google.com/...">
+                </div>
+            </div>
+        </div>
+
+        <!-- WELCOME NOTE CARD -->
+        <div class="form-section-card premium-card animate-up delay-4">
+            <div class="section-card-header">
+                <div class="section-card-icon gold">
+                    <span class="material-symbols-outlined">format_quote</span>
+                </div>
+                <div>
+                    <div class="section-card-title">Welcome Note</div>
+                    <div class="section-card-sub">Pick a preset or write your own heartfelt message</div>
+                </div>
+            </div>
+
+            <div class="preset-label">
+                <span></span>
+                Choose a Preset
+                <span></span>
+            </div>
+
+            <div class="preset-notes-grid">
+                <button type="button" class="preset-note-btn" onclick="selectPreset(this, 0)">
+                    Together with our families, we joyfully invite you to celebrate our union of love.
+                </button>
+                <button type="button" class="preset-note-btn" onclick="selectPreset(this, 1)">
+                    With hearts full of joy, we invite you to share in the blessings of our special day.
+                </button>
+                <button type="button" class="preset-note-btn" onclick="selectPreset(this, 2)">
+                    Two souls, one journey. We request the honour of your presence as we begin forever.
+                </button>
+                <button type="button" class="preset-note-btn" onclick="selectPreset(this, 3)">
+                    In the presence of our loved ones, we begin a new chapter. Please join us in celebration.
+                </button>
+                <button type="button" class="preset-note-btn" onclick="selectPreset(this, 4)" style="grid-column: 1 / -1;">
+                    With love and gratitude, we invite you to witness the beginning of our beautiful forever.
+                </button>
+            </div>
+
+            <span class="custom-note-label">Or write your own welcome note</span>
+            <textarea class="field-textarea" id="welcomeNote"
+                placeholder="Write a personal welcome note for your guests... e.g. 'With the blessings of Allah and our families, we invite you to celebrate our Nikah...'"
+                rows="4"></textarea>
+        </div>
+
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 2 — STORY, PHOTOS & RSVP
+    ══════════════════════════════════════════ -->
+    <div class="section-divider animate-up delay-4" style="margin-top:16px;">
+        <div class="divider-label">Section 2 &mdash; Story, Photos &amp; RSVP</div>
+    </div>
+
+    <div class="form-wrapper" style="margin-top:16px;">
+
+        <!-- COUPLE'S STORY CARD -->
+        <div class="form-section-card premium-card animate-up delay-5">
+            <div class="section-card-header">
+                <div class="section-card-icon gold">
+                    <span class="material-symbols-outlined">auto_stories</span>
+                </div>
+                <div>
+                    <div class="section-card-title">Your Love Story</div>
+                    <div class="section-card-sub">Share how your journey began (optional)</div>
+                </div>
+            </div>
+
+            <div class="field-group" style="margin-bottom:0;">
+                <label class="field-label" for="coupleStory">Our Story</label>
+                <textarea class="field-textarea" id="coupleStory" rows="5"
+                    placeholder="Tell your story... How did you meet? What made you fall in love? Share the moments that brought you here. e.g. 'It all started on a rainy afternoon in 2022 when we first met at a friend's wedding...'"
+                    style="min-height:140px;"></textarea>
+            </div>
+        </div>
+
+        <!-- PHOTOS NOTE CARD -->
+        <div class="form-section-card animate-up delay-5" style="padding:28px 32px;">
+            <div class="section-card-header" style="margin-bottom:20px; padding-bottom:16px;">
+                <div class="section-card-icon gold">
+                    <span class="material-symbols-outlined">photo_library</span>
+                </div>
+                <div>
+                    <div class="section-card-title">Couple Photos</div>
+                    <div class="section-card-sub">Share your favourite moments</div>
+                </div>
+            </div>
+            <div class="photo-note">
+                <div class="photo-note-icon">
+                    <span class="material-symbols-outlined">add_photo_alternate</span>
+                </div>
+                <div class="photo-note-text">
+                    <h4>Send photos via WhatsApp</h4>
+                    <p>After submitting this form, please send your couple photos directly on WhatsApp. Our team will beautifully incorporate them into your invitation. You can send 1&ndash;5 photos for your gallery section.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RSVP CARD -->
+        <div class="form-section-card premium-card animate-up delay-6">
+            <div class="section-card-header" style="margin-bottom:20px;">
+                <div class="section-card-icon gold">
+                    <span class="material-symbols-outlined">rsvp</span>
+                </div>
+                <div>
+                    <div class="section-card-title">RSVP Feature</div>
+                    <div class="section-card-sub">Let guests confirm their attendance online</div>
+                </div>
+            </div>
+
+            <label class="rsvp-toggle-row" for="rsvpToggle">
+                <div class="rsvp-info">
+                    <h4>Enable RSVP Section</h4>
+                    <p>Guests can RSVP directly on your invitation website. You'll receive responses via WhatsApp or a live dashboard.</p>
+                </div>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="rsvpToggle">
+                    <div class="toggle-slider"></div>
+                </div>
+            </label>
+        </div>
+
+        <!-- SUBMIT CARD -->
+        <div class="form-section-card animate-up delay-6" style="padding:28px 32px;">
+            <button type="button" class="btn-submit" onclick="handleSubmit()">
+                <i class="fa-brands fa-whatsapp" style="font-size:1.3rem;"></i>
+                Send All Details to WhatsApp
+            </button>
+            <p class="privacy-note">
+                <span class="material-symbols-outlined" style="font-size:14px;">lock</span>
+                Details go directly to our team via WhatsApp. We don't store any data.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- FLOATING WA -->
+    <a href="https://wa.me/919778513196" target="_blank" class="floating-wa" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // ── Read URL params ──────────────────────────────────────────────
+        const params = new URLSearchParams(window.location.search);
+        const templateId   = params.get('id')   || '1001';
+        const templateName = params.get('name') || 'Premium Template';
+
+        document.getElementById('templateNameDisplay').textContent = templateName;
+        document.getElementById('templateIdDisplay').textContent   = 'ID: ' + templateId;
+        document.title = 'Customize — ' + templateName + ' | WEB INVITES';
+
+        // ── Display Order Toggle ─────────────────────────────────────────
+        let displayOrder = 'bride_first';
+        function setDisplayOrder(val) {
+            displayOrder = val;
+            document.getElementById('orderBrideFirst').classList.toggle('selected', val === 'bride_first');
+            document.getElementById('orderGroomFirst').classList.toggle('selected', val === 'groom_first');
+        }
+
+        // ── Welcome Note Presets ────────────────────────────────────────
+        const presetNotes = [
+            "Together with our families, we joyfully invite you to celebrate our union of love.",
+            "With hearts full of joy, we invite you to share in the blessings of our special day.",
+            "Two souls, one journey. We request the honour of your presence as we begin forever.",
+            "In the presence of our loved ones, we begin a new chapter. Please join us in celebration.",
+            "With love and gratitude, we invite you to witness the beginning of our beautiful forever."
+        ];
+
+        let selectedPresetIndex = -1;
+
+        function selectPreset(btn, idx) {
+            document.querySelectorAll('.preset-note-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            selectedPresetIndex = idx;
+            document.getElementById('welcomeNote').value = presetNotes[idx];
+        }
+
+        // ── Format helpers ──────────────────────────────────────────────
+        function formatDate(dateStr) {
+            if (!dateStr) return 'Not provided';
+            const d = new Date(dateStr + 'T00:00:00');
+            return d.toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+        }
+        function formatTime(timeStr) {
+            if (!timeStr) return 'Not provided';
+            const [h, m] = timeStr.split(':');
+            const hr = parseInt(h);
+            const ampm = hr >= 12 ? 'PM' : 'AM';
+            const hour12 = hr % 12 || 12;
+            return hour12 + ':' + m + ' ' + ampm;
+        }
+
+        // ── Form Submit → WhatsApp ──────────────────────────────────────
+        function handleSubmit() {
+            const bride        = document.getElementById('brideName').value.trim();
+            const groom        = document.getElementById('groomName').value.trim();
+            const brideParents = document.getElementById('brideParents').value.trim();
+            const groomParents = document.getElementById('groomParents').value.trim();
+            const occasion     = document.getElementById('occasionType').value.trim();
+            const dateVal      = document.getElementById('eventDate').value;
+            const timeVal      = document.getElementById('eventTime').value;
+            const venue        = document.getElementById('venueName').value.trim();
+            const mapsLink     = document.getElementById('mapsLink').value.trim();
+            const welcomeNote  = document.getElementById('welcomeNote').value.trim();
+            const coupleStory  = document.getElementById('coupleStory').value.trim();
+            const rsvpEnabled  = document.getElementById('rsvpToggle').checked;
+
+            if (!bride || !groom || !occasion || !dateVal || !timeVal || !venue) {
+                alert('Please fill in all required fields (marked with *).');
+                return;
+            }
+
+            const coupleDisplay = displayOrder === 'bride_first'
+                ? bride + ' & ' + groom
+                : groom + ' & ' + bride;
+            const orderLabel = displayOrder === 'bride_first' ? "Bride's Name First" : "Groom's Name First";
+
+            const message =
+'Hello WEB INVITES Team! 👋\n\n' +
+'I\'d like to customize my Premium digital invitation.\n\n' +
+'🎨 *Template Details*\n' +
+'• Template ID: ' + templateId + '\n' +
+'• Template Name: ' + templateName + '\n' +
+'• Plan: Premium (₹499)\n\n' +
+'💑 *Couple Information*\n' +
+'• Couple: ' + coupleDisplay + '\n' +
+'• Display Order: ' + orderLabel + '\n' +
+'• Bride\'s Name: ' + bride + '\n' +
+'• Groom\'s Name: ' + groom + '\n' +
+'• Bride\'s Parents: ' + (brideParents || 'Not provided') + '\n' +
+'• Groom\'s Parents: ' + (groomParents || 'Not provided') + '\n\n' +
+'📅 *Event Details*\n' +
+'• Occasion: ' + occasion + '\n' +
+'• Date: ' + formatDate(dateVal) + '\n' +
+'• Time: ' + formatTime(timeVal) + '\n' +
+'• Venue: ' + venue + '\n' +
+'• Google Maps: ' + (mapsLink || 'Not provided') + '\n\n' +
+'💬 *Welcome Note*\n' +
+(welcomeNote || 'Not provided') + '\n\n' +
+'📖 *Our Love Story*\n' +
+(coupleStory || 'Not provided') + '\n\n' +
+'📸 *Photos*\nI will send couple photos separately via WhatsApp.\n\n' +
+'✅ *RSVP Section*\n' +
+'• Include RSVP: ' + (rsvpEnabled ? 'Yes, please include it' : 'No, not needed') + '\n\n' +
+'Please proceed with my invitation. Thank you! 🌸';
+
+            const encoded = encodeURIComponent(message);
+            window.open('https://wa.me/919778513196?text=' + encoded, '_blank');
+        }
+    </script>
+
+</body>
+</html>
