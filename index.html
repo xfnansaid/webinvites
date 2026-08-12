@@ -1261,6 +1261,70 @@
             }
         }
 
+        @media (max-width: 768px) {
+            .templates-section {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .templates-section .section-header {
+                order: 1;
+            }
+
+            .templates-section .premium-tier-block {
+                order: 2;
+                margin-top: 0 !important;
+                margin-bottom: 40px !important;
+            }
+
+            .templates-section .standard-tier-block {
+                order: 3;
+                margin-bottom: 0 !important;
+            }
+
+            .slider-nav-btn {
+                display: none;
+            }
+
+            .slider-wrapper {
+                padding: 0 16px !important;
+            }
+
+            .templates-slider {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 12px !important;
+                overflow-x: visible !important;
+                scroll-snap-type: none !important;
+                padding: 4px 0 16px 0 !important;
+            }
+
+            .templates-slider .tp-card,
+            .tp-card {
+                flex: none !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                border-radius: 16px;
+            }
+
+            .btn-card-overlay {
+                bottom: 10px;
+                left: 8px;
+                right: 8px;
+                padding: 9px 4px;
+                font-size: 0.78rem;
+                border-radius: 10px;
+                letter-spacing: 0.02em;
+            }
+
+            .tp-badge-price {
+                top: 10px;
+                right: 10px;
+                font-size: 0.72rem;
+                padding: 3px 8px;
+            }
+        }
+
         @media (max-width: 640px) {
             .hero-section {
                 padding-top: 110px;
@@ -1271,7 +1335,7 @@
             }
 
             .templates-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr) !important;
             }
 
             .features-grid {
@@ -1340,12 +1404,12 @@
                 <h2 class="section-heading">Pick a design you'll <span
                         style="font-style: italic; font-family: var(--font-serif); color: var(--champagne-600);">love.</span>
                 </h2>
-                <p style="color: var(--ink-muted); margin-top: 8px;">Swipe horizontally to explore designs for Standard
+                <p style="color: var(--ink-muted); margin-top: 8px;">Explore our collection of designs for Standard
                     &amp; Premium packages.</p>
             </div>
 
             <!-- SECTION 1: STANDARD TEMPLATES -->
-            <div class="template-tier-block reveal" style="margin-bottom: 50px;">
+            <div class="template-tier-block standard-tier-block reveal" style="margin-bottom: 50px;">
                 <div style="text-align: center; margin-bottom: 24px;">
                     <h3
                         style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--ink); display: inline-flex; align-items: center; gap: 8px;">
@@ -1498,7 +1562,7 @@
             </div>
 
             <!-- SECTION 2: PREMIUM TEMPLATES -->
-            <div class="template-tier-block reveal" style="margin-top: 40px;">
+            <div class="template-tier-block premium-tier-block reveal" style="margin-top: 40px;">
                 <div style="text-align: center; margin-bottom: 24px;">
                     <h3
                         style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--ink); display: inline-flex; align-items: center; gap: 8px;">
